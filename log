@@ -509,3 +509,9 @@ treemap.c:90:5: error: implicit declaration of function ‘removeNode’; did yo
 cc1: all warnings being treated as errors
 Compilation failed
 51e2086
+Sat Apr 23 23:55:51 UTC 2022: 
+ treemap.c | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+ tests:  3|7
+total_score: 0/70
+2e61493
