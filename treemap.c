@@ -74,6 +74,7 @@ TreeNode * minimum(TreeNode * x){
     }
   return aux;
 */
+  return NULL;
 }
 
 
