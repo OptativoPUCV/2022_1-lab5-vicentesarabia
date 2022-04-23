@@ -92,11 +92,11 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
   if(key>tree->root->key)
   {
     tree->root=tree->root->right;
-    return tree->root->data;
+    
   }
   else{
     tree->root=tree->root->left;
-    return tree->root->data;
+    
   }
   return NULL;
 }
