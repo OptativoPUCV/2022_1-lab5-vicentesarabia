@@ -91,3 +91,30 @@ treemap.c:102:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 34f6a9f
+Sat Apr 23 07:21:06 UTC 2022: 
+ treemap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:87:3: error: unknown type name ‘treeNode’; did you mean ‘TreeNode’?
+   treeNode * aux=tree->root;
+   ^~~~~~~~
+   TreeNode
+treemap.c:87:18: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+   treeNode * aux=tree->root;
+                  ^~~~
+treemap.c:88:14: error: request for member ‘key’ in something not a structure or union
+   if(key==aux->key)
+              ^~
+treemap.c:90:15: error: request for member ‘data’ in something not a structure or union
+     return aux->data;
+               ^~
+treemap.c:92:6: error: expected ‘(’ before ‘else’
+   if else(key>aux->key)
+      ^~~~
+treemap.c:102:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+b715f04
