@@ -66,7 +66,6 @@ TreeNode * minimum(TreeNode * x){
   if(x==NULL)return NULL;
   while(x->left!=NULL)
     {
-      printf("a");
       if(x->left!=NULL)
       {
         x=x->left;
