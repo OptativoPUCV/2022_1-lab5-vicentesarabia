@@ -494,3 +494,18 @@ treemap.c:90:5: error: implicit declaration of function ‘removeNode’; did yo
 cc1: all warnings being treated as errors
 Compilation failed
 03ad13c
+Sat Apr 23 23:40:27 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c:78:2: error: expected identifier or ‘(’ before ‘.’ token
+ }.
+  ^
+treemap.c: In function ‘eraseTreeMap’:
+treemap.c:90:5: error: implicit declaration of function ‘removeNode’; did you mean ‘remove’? [-Werror=implicit-function-declaration]
+     removeNode(tree, node);
+     ^~~~~~~~~~
+     remove
+cc1: all warnings being treated as errors
+Compilation failed
+51e2086
