@@ -670,3 +670,8 @@ treemap.c:45:12: error: assignment from incompatible pointer type [-Werror=incom
 cc1: all warnings being treated as errors
 Compilation failed
 b72b96f
+Sun Apr 24 00:35:09 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+5dcc45d
