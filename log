@@ -1038,3 +1038,23 @@ treemap.c:157:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 036931c
+Sun Apr 24 03:45:29 UTC 2022: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘firstTreeMap’:
+treemap.c:155:18: error: invalid initializer
+   TreeNode aux = tree->root;
+                  ^~~~
+treemap.c:156:18: error: incompatible type for argument 1 of ‘minimum’
+   return minimum(aux);
+                  ^~~
+treemap.c:91:12: note: expected ‘TreeNode * {aka struct TreeNode *}’ but argument is of type ‘TreeNode {aka struct TreeNode}’
+ TreeNode * minimum(TreeNode * x){
+            ^~~~~~~
+treemap.c:157:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+5003024
