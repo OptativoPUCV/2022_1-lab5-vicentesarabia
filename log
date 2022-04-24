@@ -1160,3 +1160,14 @@ Sun Apr 24 20:03:11 UTC 2022:
  tests:  15|4
 total_score: 20/70
 db9d596
+Sun Apr 24 22:02:38 UTC 2022: 
+ treemap.c | 28 ++++++++++++++--------------
+ 1 file changed, 14 insertions(+), 14 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:89:19: error: ‘tree_current’ undeclared (first use in this function)
+       aux->parent=tree_current;
+                   ^~~~~~~~~~~~
+treemap.c:89:19: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+99a5cae
