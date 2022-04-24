@@ -41,10 +41,11 @@ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)){
   TreeMap * new = (TreeMap*)malloc(sizeof(TreeMap));
   new->lower_than=lower_than;
   if (new==NULL)return NULL;
-  new->current=-1;
+  
   new->root=(Pair**)malloc(sizeof(Pair*));
   new->root->right=NULL;
   new->root->left=NULL;
+  new->current=new->root;
   
     //new->lower_than = lower_than;
   return new;
