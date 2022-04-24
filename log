@@ -521,3 +521,21 @@ Sat Apr 23 23:57:00 UTC 2022:
  tests:  3|7
 total_score: 0/70
 04daed7
+Sun Apr 24 00:19:05 UTC 2022: 
+ treemap.c | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:42:3: error: unknown type name ‘inr’; did you mean ‘int’?
+   inr resultado= new->(*lower_than) (void* key1, void* key2)
+   ^~~
+   int
+treemap.c:42:23: error: expected identifier before ‘(’ token
+   inr resultado= new->(*lower_than) (void* key1, void* key2)
+                       ^
+treemap.c:42:7: error: unused variable ‘resultado’ [-Werror=unused-variable]
+   inr resultado= new->(*lower_than) (void* key1, void* key2)
+       ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+d2a3634
