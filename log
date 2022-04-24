@@ -1058,3 +1058,29 @@ treemap.c:157:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 5003024
+Sun Apr 24 03:47:10 UTC 2022: 
+ treemap.c | 11 ++++++++---
+ 1 file changed, 8 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘firstTreeMap’:
+treemap.c:153:18: error: invalid initializer
+   TreeNode aux = tree->root;
+                  ^~~~
+treemap.c:154:12: error: invalid type argument of ‘->’ (have ‘TreeNode {aka struct TreeNode}’)
+   while(aux->left!=NULL)
+            ^~
+treemap.c:156:13: error: invalid type argument of ‘->’ (have ‘TreeNode {aka struct TreeNode}’)
+       if(aux->left!=NULL)
+             ^~
+treemap.c:158:16: error: invalid type argument of ‘->’ (have ‘TreeNode {aka struct TreeNode}’)
+         aux=aux->left;
+                ^~
+treemap.c:161:13: error: invalid type argument of ‘->’ (have ‘TreeNode {aka struct TreeNode}’)
+   return aux->pair;
+             ^~
+treemap.c:162:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+6acb630
