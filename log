@@ -741,3 +741,20 @@ Sun Apr 24 00:57:24 UTC 2022:
  tests:  6|6
 total_score: 5/70
 7ebdfa4
+Sun Apr 24 01:05:16 UTC 2022: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:100:17: error: passing argument 1 of ‘is_equal’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+     if(is_equal(aux,key,aux->pair->key)==1)
+                 ^~~
+treemap.c:22:5: note: expected ‘TreeMap * {aka struct TreeMap *}’ but argument is of type ‘TreeNode * {aka struct TreeNode *}’
+ int is_equal(TreeMap* tree, void* key1, void* key2){
+     ^~~~~~~~
+treemap.c:104:8: error: implicit declaration of function ‘lowe_than’ [-Werror=implicit-function-declaration]
+     if(lowe_than(key,aux->pair->key)==1)
+        ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ee7ecd4
