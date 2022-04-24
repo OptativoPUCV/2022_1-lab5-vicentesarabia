@@ -1182,3 +1182,14 @@ Sun Apr 24 22:06:18 UTC 2022:
  tests:  14|4
 total_score: 20/70
 b1a856d
+Sun Apr 24 22:07:54 UTC 2022: 
+ treemap.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:4:0:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:82:24: error: ‘tree_current’ undeclared (first use in this function)
+   if(is_equal(tree,key,tree_current->pair->key)==1)
+                        ^~~~~~~~~~~~
+treemap.c:82:24: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+afa9ea3
