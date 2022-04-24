@@ -53,12 +53,13 @@ return NULL;
 
 
 void insertTreeMap(TreeMap * tree, void* key, void * value) {
-  /*
+  TreeNode * new = createTreeNode(key,value)
   if(tree->root==NULL)
   {
-    tree->root=createTreeNode(key,value);
-    tree->current=tree->root;
+    tree->root=new;
+    tree->current=new;
   }
+/*
   if(tree->root!=NULL)
   {
     TreeNode * aux=tree->root;
