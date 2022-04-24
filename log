@@ -1014,3 +1014,27 @@ Sun Apr 24 03:40:15 UTC 2022:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 bde9a29
+Sun Apr 24 03:44:44 UTC 2022: 
+ treemap.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:56:13: error: unused variable ‘new’ [-Werror=unused-variable]
+   TreeNode* new;
+             ^~~
+treemap.c: In function ‘firstTreeMap’:
+treemap.c:155:18: error: invalid initializer
+   TreeNode aux = tree->root;
+                  ^~~~
+treemap.c:156:18: error: incompatible type for argument 1 of ‘minimum’
+   return minimum(aux);
+                  ^~~
+treemap.c:91:12: note: expected ‘TreeNode * {aka struct TreeNode *}’ but argument is of type ‘TreeNode {aka struct TreeNode}’
+ TreeNode * minimum(TreeNode * x){
+            ^~~~~~~
+treemap.c:157:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+036931c
