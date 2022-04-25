@@ -268,6 +268,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
     }
     return max->pair;
   }
+  return max->pair;
   
 }
 
