@@ -203,12 +203,13 @@ Pair * upperBound(TreeMap * tree, void* key) {
     else if(tree->lower_than(key,aux->pair->key)==0)
     {
       
-      a++;
-      if(a==1)
+      
+      if(a==0)
       {
         max=aux;
       }
       aux=aux->right;
+      a++;
     }
   }
   return max->pair;
