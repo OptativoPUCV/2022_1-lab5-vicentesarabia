@@ -291,16 +291,17 @@ Pair * nextTreeMap(TreeMap * tree) {
   }
   else
   {
-    while(aux->parent!=NULL)
+    TreeNode *padre=tree->current->parent;
+    while(padre!=NULL)
     {
-      if(tree->lower_than(tree->current->pair->key,aux->parent->pair->key)==1)
+      if(tree->lower_than(tree->current->pair->key,padre->pair->key)==1)
       {
         tree->current=aux->parent;
         return aux->parent->pair;
       }
       else
       {
-        aux=aux->parent;
+        padre=padre->parent;
       }
 
 
