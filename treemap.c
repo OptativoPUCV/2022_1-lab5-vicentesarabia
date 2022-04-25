@@ -285,8 +285,9 @@ Pair * nextTreeMap(TreeMap * tree) {
   TreeNode *aux=tree->current;
   if(aux->right!=NULL)
   {
-    tree->current=minimum(aux->right);
-    return minimum(aux->right);
+    TreeNode* nodo=aux->right;
+    tree->current=minimum(nodo);
+    return minimum(nodo);
   }
   else
   {
