@@ -281,7 +281,7 @@ Pair * firstTreeMap(TreeMap * tree) {
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
-        
+  int a=0;
   TreeNode *aux=tree->current;
   if(aux->right!=NULL)
   {
@@ -293,7 +293,7 @@ Pair * nextTreeMap(TreeMap * tree) {
   {
     while(1)
     {
-      if(tree->lower_than(aux->parent->pair->key,aux->pair->key)==1)
+      if(tree->lower_than(tree->current->pair->key,aux->parent->pair->key)==1)
       {
         tree->current=aux->parent;
         return aux->parent->pair;
@@ -301,6 +301,12 @@ Pair * nextTreeMap(TreeMap * tree) {
       else
       {
         aux=aux->parent;
+      }
+      a++;
+      if(a>200)
+      {
+        printf("xd");
+        break;
       }
     }
 
