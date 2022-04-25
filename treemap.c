@@ -260,7 +260,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
       a++;
       if(a==1)
       {
-        max=aux->right;
+        max=aux;
       }
     }
   }
