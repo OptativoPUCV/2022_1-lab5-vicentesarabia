@@ -1744,3 +1744,9 @@ treemap.c:128:20: error: ‘left’ undeclared (first use in this function)
 treemap.c:128:20: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 48e7575
+Mon Apr 25 03:37:03 UTC 2022: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  26|1
+total_score: 60/70
+5fe3a1e
