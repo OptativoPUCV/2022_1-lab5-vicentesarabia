@@ -184,32 +184,34 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 
 
 Pair * upperBound(TreeMap * tree, void* key) {
+  
   if(searchTreeMap(tree,key))return searchTreeMap(tree,key);
   TreeNode *ub=(TreeNode*)malloc(sizeof(TreeNode));
   TreeNode *aux=tree->root;
   while(aux!=NULL)
+  {
+    
+    if(tree->lower_than(key,aux->pair->key)==1)
     {
-      if(tree->lower_than(key,aux->pair->key)==1)
-      {
-        ub=aux;
-        if(aux->left==NULL){
-          tree->current=aux;
-          return ub->pair;
-        }
-        aux=aux->left;
-      }
-      else if(tree->lower_than(key,aux->pair->key))
-      {
-        if(aux->right==NULL){
-          tree->current=aux;
-          return ub->pair;
-        }
-        aux=aux->right;
-      }
-      else{
+      ub=aux;
+      if(aux->left==NULL){
+        tree->current=aux;
         return ub->pair;
       }
+      aux=aux->left;
     }
+    else if(tree->lower_than(aux->pair->key,key))
+    {
+      if(aux->right==NULL){
+        tree->current=aux;
+        return ub->pair;
+      }
+      aux=aux->right;
+    }
+    else{
+      return ub->pair;
+    }
+  }
   return NULL;
 }
 
