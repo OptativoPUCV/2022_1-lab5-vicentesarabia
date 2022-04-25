@@ -1337,3 +1337,18 @@ Mon Apr 25 02:09:30 UTC 2022:
  tests:  18|3
 total_score: 30/70
 8347da9
+Mon Apr 25 02:16:04 UTC 2022: 
+ treemap.c | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘upperBound’:
+treemap.c:243:3: error: ‘a’ undeclared (first use in this function)
+   a=0;
+   ^
+treemap.c:243:3: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:273:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+ea810b0

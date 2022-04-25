@@ -240,6 +240,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 Pair * upperBound(TreeMap * tree, void* key) {
   TreeNode *aux = tree->root;
   TreeNode *max = tree->root;
+  a=0;
   while(aux!=NULL)
   {
     if(is_equal(tree,key,aux->pair->key)==1)
@@ -251,23 +252,23 @@ Pair * upperBound(TreeMap * tree, void* key) {
     if(tree->lower_than(key,aux->pair->key)==1)
     {
       aux=aux->left;
+      
     }
     else if(tree->lower_than(key,aux->pair->key)==0)
     {
       aux=aux->right;
+      a++;
+      if(a==1)
+      {
+        max=aux->right;
+      }
     }
   }
   if(aux==NULL)
   {
-    while(max->right!=NULL)
-    {
-      if(max->right!=NULL)
-      {
-        max=max->right;
-      }
-    }
+    return max->pair;
   }
-  return max->pair;
+  
   
 }
 
