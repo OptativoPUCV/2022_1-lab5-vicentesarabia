@@ -281,7 +281,7 @@ Pair * firstTreeMap(TreeMap * tree) {
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
-  int a=0;
+  
   TreeNode *aux=tree->current;
   if(aux->right!=NULL)
   {
@@ -302,13 +302,7 @@ Pair * nextTreeMap(TreeMap * tree) {
       {
         aux=aux->parent;
       }
-      a++;
-      if(a>200)
-      {
-        printf("xd");
-        break;
-      }
-    }
+
 
   }
  return NULL;   
