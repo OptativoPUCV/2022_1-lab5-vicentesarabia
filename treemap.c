@@ -283,11 +283,10 @@ Pair * firstTreeMap(TreeMap * tree) {
 Pair * nextTreeMap(TreeMap * tree) {
         
   TreeNode *aux=tree->current;
-  TreeNode *nodo;
   if(aux->right!=NULL)
   {
-    nodo=minimum(aux->right);
-    return nodo;
+    tree->current=minimum(aux->right)
+    return minimum(aux->right);
   }
   else
   {
