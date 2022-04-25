@@ -264,12 +264,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
       }
     }
   }
-  if(aux==NULL)
-  {
-    return max->pair;
-  }
-  
-  
+  return max->pair;
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
