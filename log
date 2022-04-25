@@ -1730,3 +1730,17 @@ Mon Apr 25 03:21:43 UTC 2022:
  tests:  23|2
 total_score: 45/70
 57aca80
+Mon Apr 25 03:36:35 UTC 2022: 
+ treemap.c | 90 +++++++++++++--------------------------------------------------
+ 1 file changed, 18 insertions(+), 72 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘removeNode’:
+treemap.c:126:24: error: expected identifier before ‘->’ token
+    tree->current=node->->parent;
+                        ^~
+treemap.c:128:20: error: ‘left’ undeclared (first use in this function)
+    if(node->parent-left==node)node->parent->left=node->left;
+                    ^~~~
+treemap.c:128:20: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+48e7575
