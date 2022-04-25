@@ -1795,3 +1795,9 @@ treemap.c:187:37: error: return makes pointer from integer without a cast [-Werr
 cc1: all warnings being treated as errors
 Compilation failed
 1242fb5
+Mon Apr 25 03:51:39 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  26|1
+total_score: 60/70
+75959ae
