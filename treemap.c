@@ -259,14 +259,13 @@ Pair * upperBound(TreeMap * tree, void* key) {
   }
   if(aux==NULL)
   {
-    while(max->left!=NULL)
+    while(max->right!=NULL)
     {
-      if(max->left!=NULL)
+      if(max->right!=NULL)
       {
-        max=max->left;
+        max=max->right;
       }
     }
-    return max->pair;
   }
   return max->pair;
   
