@@ -1226,3 +1226,33 @@ Mon Apr 25 00:29:31 UTC 2022:
  tests:  17|3
 total_score: 30/70
 adaace5
+Mon Apr 25 01:21:13 UTC 2022: 
+ treemap.c | 55 +++++++++++++++++++++++++++++++++++++++++++++++++++++--
+ 1 file changed, 53 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘removeNode’:
+treemap.c:143:12: error: implicit declaration of function ‘minimun’; did you mean ‘minimum’? [-Werror=implicit-function-declaration]
+       hijo=minimun(hijo);
+            ^~~~~~~
+            minimum
+treemap.c:143:11: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+       hijo=minimun(hijo);
+           ^
+treemap.c:147:5: error: expected ‘;’ before ‘}’ token
+     }
+     ^
+treemap.c:168:11: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+       hijo=minimun(hijo);
+           ^
+treemap.c:172:5: error: expected ‘;’ before ‘}’ token
+     }
+     ^
+treemap.c:193:11: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+       hijo=minimun(hijo);
+           ^
+treemap.c:197:5: error: expected ‘;’ before ‘}’ token
+     }
+     ^
+cc1: all warnings being treated as errors
+Compilation failed
+7e3c44d
