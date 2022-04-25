@@ -1466,3 +1466,14 @@ treemap.c:289:5: error: expected ‘;’ before ‘return’
      ^~~~~~
 Compilation failed
 c857518
+Mon Apr 25 02:54:30 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:289:12: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+     return minimum(aux->right);
+            ^~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+e7f48b0
