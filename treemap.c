@@ -303,8 +303,7 @@ Pair * nextTreeMap(TreeMap * tree) {
       {
         padre=padre->parent;
       }
-
-
+    }
   }
  return NULL;   
 }
