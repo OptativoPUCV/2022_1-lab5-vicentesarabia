@@ -1262,3 +1262,44 @@ Mon Apr 25 01:22:41 UTC 2022:
  tests:  17|3
 total_score: 30/70
 4052d6c
+Mon Apr 25 02:05:34 UTC 2022: 
+ treemap.c | 19 ++++++++++++++++++-
+ 1 file changed, 18 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘upperBound’:
+treemap.c:241:18: error: invalid initializer
+   TreeNode aux = tree->root;
+                  ^~~~
+treemap.c:242:12: error: invalid operands to binary != (have ‘TreeNode {aka struct TreeNode}’ and ‘void *’)
+   while(aux!=NULL)
+            ^~
+treemap.c:244:29: error: invalid type argument of ‘->’ (have ‘TreeNode {aka struct TreeNode}’)
+     if(is_equal(tree,key,aux->pair->key)==1)
+                             ^~
+treemap.c:246:20: error: incompatible types when assigning to type ‘TreeNode * {aka struct TreeNode *}’ from type ‘TreeNode {aka struct TreeNode}’
+       tree->current=aux;
+                    ^
+treemap.c:247:17: error: invalid type argument of ‘->’ (have ‘TreeNode {aka struct TreeNode}’)
+       return aux->pair;
+                 ^~
+treemap.c:250:32: error: invalid type argument of ‘->’ (have ‘TreeNode {aka struct TreeNode}’)
+     if(tree->lower_than(key,aux->pair->key)==1)
+                                ^~
+treemap.c:252:14: error: invalid type argument of ‘->’ (have ‘TreeNode {aka struct TreeNode}’)
+       aux=aux->left;
+              ^~
+treemap.c:254:37: error: invalid type argument of ‘->’ (have ‘TreeNode {aka struct TreeNode}’)
+     else if(tree->lower_than(key,aux->pair->key)==0)
+                                     ^~
+treemap.c:256:14: error: invalid type argument of ‘->’ (have ‘TreeNode {aka struct TreeNode}’)
+       aux=aux->right;
+              ^~
+treemap.c:259:13: error: invalid type argument of ‘->’ (have ‘TreeNode {aka struct TreeNode}’)
+   return aux->parent->pair;
+             ^~
+treemap.c:260:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+4ff5808
