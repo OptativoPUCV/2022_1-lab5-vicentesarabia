@@ -204,7 +204,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
     {
       
       
-      if(a==0)
+      if(a==1)
       {
         max=aux;
       }
