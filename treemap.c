@@ -140,7 +140,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
     }else{
 
       TreeNode* hijo = node->right;
-      hijo=minimun(hijo);
+      hijo=minimum(hijo);
       node->parent->left=hijo;
       hijo->parent=node->parent;
       hijo->right=node->right;
