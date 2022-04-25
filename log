@@ -1386,3 +1386,28 @@ Mon Apr 25 02:24:15 UTC 2022:
  tests:  18|3
 total_score: 30/70
 7357594
+Mon Apr 25 02:49:14 UTC 2022: 
+ treemap.c | 24 +++++++++++++++++++++++-
+ 1 file changed, 23 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:290:5: error: expected ‘;’ before ‘return’
+     return nodo;
+     ^~~~~~
+treemap.c:294:11: error: ‘true’ undeclared (first use in this function); did you mean ‘tree’?
+     while(true)
+           ^~~~
+           tree
+treemap.c:294:11: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:296:10: error: implicit declaration of function ‘lower_than’ [-Werror=implicit-function-declaration]
+       if(lower_than(aux->parent->pair->key,aux->pair->key)==1)
+          ^~~~~~~~~~
+treemap.c:286:13: error: variable ‘nodo’ set but not used [-Werror=unused-but-set-variable]
+   TreeNode *nodo;
+             ^~~~
+treemap.c:309:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+5d0b5fb
